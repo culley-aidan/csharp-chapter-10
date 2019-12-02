@@ -45,7 +45,25 @@ namespace DemoCarLoan2
         }
         class CarLoan : Loan
         {
-            public int Year { get; set; }
+            private const int EARLIEST_YEAR = 2006;
+            private const int LOWEST_INVALID_NUM = 1000;
+            private int year;
+            public int Year
+            {
+                set
+                {
+                    if (value < EARLIEST_YEAR) {
+                        year = value;
+                        LoanAmount = 0;
+                    } else {
+                        year = value;
+                    }
+                }
+                get
+                {
+                    return year;
+                }
+            }
             public string Make { get; set; }
         }
     }
