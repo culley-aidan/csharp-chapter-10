@@ -1,0 +1,15 @@
+
+DemoLoan/.vs/DemoLoan/v16/.suo
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+*.json
+*.dll
+*.exe
+*.pdb
+DemoLoan/DemoLoan/obj/Debug/netcoreapp3.0/DemoLoan.AssemblyInfo.cs
+*.cache
+DemoLoan/DemoLoan/obj/Debug/netcoreapp3.0/DemoLoan.csproj.FileListAbsolute.txt
+*.props
+*.targets
