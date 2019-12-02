@@ -22,9 +22,26 @@ namespace DemoCarLoan2
         }
         class Loan
         {
+            public const double MINIMUM_LOAN = 5000;
+            protected double loanAmount;
             public int LoanNumber { get; set; }
             public string LastName { get; set; }
-            public double LoanAmount { get; set; }
+            
+            public double LoanAmount
+            {
+                set
+                {
+                    if (value < MINIMUM_LOAN) {
+                        loanAmount = MINIMUM_LOAN;
+                    } else {
+                        loanAmount = value;
+                    }
+                } 
+                get
+                {
+                    return loanAmount;
+                }
+            }
         }
         class CarLoan : Loan
         {
