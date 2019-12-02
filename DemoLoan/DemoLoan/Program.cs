@@ -6,7 +6,11 @@ namespace DemoLoan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Loan aLoan = new Loan();
+            aLoan.LoanNumber = 2239;
+            aLoan.LastName = "Mitchell";
+            aLoan.LoanAmount = 1000.00;
+            Console.WriteLine("Loan #{0} for {1} is for {2:C2}", aLoan.LoanNumber, aLoan.LastName, aLoan.LoanAmount);
         }
         class Loan
         {
