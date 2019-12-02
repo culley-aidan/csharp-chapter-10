@@ -65,6 +65,21 @@ namespace DemoCarLoan2
                 }
             }
             public string Make { get; set; }
+            public new int LoanNumber
+            {
+                get
+                {
+                    return base.LoanNumber;
+                }
+                set
+                {
+                    if (value < LOWEST_INVALID_NUM) {
+                        base.LoanNumber = value;
+                    } else {
+                        base.LoanNumber = value % LOWEST_INVALID_NUM;
+                    }
+                }
+            }
         }
     }
 }
