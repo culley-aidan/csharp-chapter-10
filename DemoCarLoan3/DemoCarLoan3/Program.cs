@@ -45,6 +45,13 @@ namespace DemoCarLoan3
                     return loanAmount;
                 }
             }
+
+            public Loan(int num, string name, double amount)
+            {
+                LoanNumber = num;
+                LastName = name;
+                LoanAmount = amount;
+            }
         }
         class CarLoan : Loan
         {
