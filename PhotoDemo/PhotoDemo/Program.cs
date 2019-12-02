@@ -16,5 +16,9 @@ namespace PhotoDemo
         {
 
         }
+        class FramedPhoto : Photo
+        {
+
+        }
     }
 }
