@@ -96,6 +96,11 @@ namespace DemoCarLoan3
                     }
                 }
             }
+            public CarLoan(int num, string name, double amount, int year, string make) : base(num, name, amount)
+            {
+                Year = year;
+                Make = make;
+            }
         }
     }
 }
