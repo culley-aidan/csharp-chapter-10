@@ -18,5 +18,10 @@ namespace DemoCarLoan
             public string LastName { get; set; }
             public double LoanAmount { get; set; }
         }
+        class CarLoan : Loan
+        {
+            public int Year { get; set; }
+            public string Make { get; set; }
+        }
     }
 }
