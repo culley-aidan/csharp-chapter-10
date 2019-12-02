@@ -8,5 +8,9 @@ namespace PhotoDemo
         {
             Console.WriteLine("Hello World!");
         }
+        class Photo
+        {
+
+        }
     }
 }
