@@ -4,7 +4,7 @@ C# Programming Chapter 10
 ## TODO
 - [X] - Guided - DemoLoan
 - [X] - Guided - DemoCarLoan
-- [ ] - Guided - DemoCarLoan2
+- [X] - Guided - DemoCarLoan2
 - [ ] - Guided - DemoCarLoan3
 - [ ] - 02 - PhotoDemo
 - [ ] - 3b - OrderDemo
