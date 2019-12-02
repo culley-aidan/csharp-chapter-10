@@ -8,5 +8,11 @@ namespace DemoLoan
         {
             Console.WriteLine("Hello World!");
         }
+        class Loan
+        {
+            public int LoanNumber { get; set; }
+            public string LastName { get; set; }
+            public double LoanAmount { get; set; }
+        }
     }
 }
