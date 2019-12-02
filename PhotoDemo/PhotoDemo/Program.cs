@@ -12,5 +12,9 @@ namespace PhotoDemo
         {
 
         }
+        class MattedPhoto : Photo
+        {
+
+        }
     }
 }
