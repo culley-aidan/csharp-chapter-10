@@ -27,7 +27,16 @@ namespace PhotoDemo
                     };
                 }
             }
-
+            public Photo(double width, double length)
+            {
+                Width = width;
+                Length = length;
+            }
+            public Photo() => new Photo(0, 0);
+            public override string ToString()
+            {
+                return GetType().ToString();
+            }
         }
         class MattedPhoto : Photo
         {
