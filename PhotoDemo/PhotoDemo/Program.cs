@@ -32,20 +32,38 @@ namespace PhotoDemo
                 Width = width;
                 Length = length;
             }
-            public Photo() => new Photo(0, 0);
-            public override string ToString()
-            {
-                return GetType().ToString();
-            }
+            public Photo() 
+                => new Photo(0, 0);
+            public override string ToString() 
+                => GetType().ToString();
         }
         class MattedPhoto : Photo
         {
+            private const double priceModifier = 10;
             public string Color { get; set; }
+            public new double Price { get => base.Price + priceModifier; }
+            public MattedPhoto(double width, double length, string color) : base(width, length) 
+                => Color = color;
+            public MattedPhoto() 
+                => new FramedPhoto(0, 0, "", "");
+            public override string ToString()
+                => GetType().ToString();
         }
         class FramedPhoto : Photo
         {
+            private const double priceModifier = 25;
             public string Material { get; set; }
             public string Style { get; set; }
+            public new double Price { get => base.Price + priceModifier; }
+            public FramedPhoto(double width, double length, string material, string style) : base(width, length)
+            {
+                Material = material;
+                Style = style;
+            }
+            public FramedPhoto() 
+                => new FramedPhoto(0, 0, "", "");
+            public override string ToString()
+                => GetType().ToString();
         }
     }
 }
