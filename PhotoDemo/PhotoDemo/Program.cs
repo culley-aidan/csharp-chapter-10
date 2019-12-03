@@ -6,7 +6,18 @@ namespace PhotoDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Photo photo = new Photo(8, 10);
+            DisplayPhoto(photo);
+            photo.Length = 12;
+            photo.Width = 10;
+            DisplayPhoto(photo);
+            photo.Length = 14;
+            photo.Width = 12;
+            DisplayPhoto(photo);
+        }
+        private static void DisplayPhoto(Photo photo)
+        {
+            Console.WriteLine("Type: {0}, ToString(): {1}, Length: {2}, Width: {3}, Price: {4}", photo.GetType(), photo.ToString(), photo.Length, photo.Width, photo.Price);
         }
         class Photo
         {
