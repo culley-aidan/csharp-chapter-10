@@ -40,11 +40,12 @@ namespace PhotoDemo
         }
         class MattedPhoto : Photo
         {
-
+            public string Color { get; set; }
         }
         class FramedPhoto : Photo
         {
-
+            public string Material { get; set; }
+            public string Style { get; set; }
         }
     }
 }
