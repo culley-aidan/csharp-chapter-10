@@ -23,7 +23,7 @@ namespace PhotoDemo
                     {
                         EIGHTBYTENAREA => EIGHTBYTENCOST,
                         TENBYTWELVEAREA => TENBYTWELVECOST,
-                        _ => 9.99,
+                        _ => DEFAULTCOST,
                     };
                 }
             }
