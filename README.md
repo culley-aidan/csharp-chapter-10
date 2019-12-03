@@ -7,7 +7,7 @@ C# Programming Chapter 10
 - [X] - Guided - DemoCarLoan2
 - [X] - Guided - DemoCarLoan3
 - [X] - 02 - PhotoDemo
-- [ ] - 3b - OrderDemo
+- [ ] - ~~3b - OrderDemo~~
 - [ ] - 04 - PackageDemo
 - [ ] - 06 - ShapesDemo
 - [ ] - 09 - SalespersonDemo
