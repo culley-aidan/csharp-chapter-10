@@ -6,7 +6,7 @@ namespace PhotoDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Photos, const $3.99 8inch by 10inch, const $5.99 for 10inch by 12inch, const $9.99 as default: ");
+            Console.WriteLine("Photos, const $3.99 8inch by 10inch, const $5.99 for 10inch by 12inch, const $9.99 as default: " + Environment.NewLine);
             Photo photo = new Photo(8, 10);
             DisplayPhoto(photo);
             photo.Length = 12;
@@ -15,6 +15,7 @@ namespace PhotoDemo
             photo.Length = 14;
             photo.Width = 12;
             DisplayPhoto(photo);
+            Console.WriteLine(Environment.NewLine + "MattedPhotos, const $3.99 8inch by 10inch plus 10, const $5.99 for 10inch by 12inch plus ten, const $9.99 as default plus 25: " + Environment.NewLine);
             MattedPhoto mtphoto = new MattedPhoto(8, 10, "Blue");
             DisplayMattedPhoto(mtphoto);
             mtphoto.Length = 12;
@@ -25,6 +26,19 @@ namespace PhotoDemo
             mtphoto.Width = 12;
             mtphoto.Color = "Brown";
             DisplayMattedPhoto(mtphoto);
+            Console.WriteLine(Environment.NewLine + "FramedPhotos, const $3.99 8inch by 10inch plus 25, const $5.99 for 10inch by 12inch plus 25, const $9.99 as default plus 25: " + Environment.NewLine);
+            FramedPhoto fmphoto = new FramedPhoto(8, 10, "Fabric", "Old");
+            DisplayFramedPhoto(fmphoto);
+            fmphoto.Length = 12;
+            fmphoto.Width = 10;
+            fmphoto.Material = "Glass";
+            fmphoto.Style = "Modern";
+            DisplayFramedPhoto(fmphoto);
+            fmphoto.Length = 14;
+            fmphoto.Width = 12;
+            fmphoto.Material = "Steel";
+            fmphoto.Style = "Industrial";
+            DisplayFramedPhoto(fmphoto);
 
         }
         private static void DisplayPhoto(Photo photo)
