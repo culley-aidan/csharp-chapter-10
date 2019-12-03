@@ -8,6 +8,8 @@ namespace PackageDemo
         {
             Package pkg = new Package(1, "Test", 7.0);
             Console.WriteLine("Id: {0}, Name: {1}, Weight: {2}, Price: {3}", pkg.IdNumber, pkg.Name, pkg.Weight, pkg.Price);
+            InsuredPackage ipkg = new InsuredPackage(1, "Test", 7.0, 20);
+            Console.WriteLine("Id: {0}, Name: {1}, Weight: {2}, Value: {3}, Price: {4}", ipkg.IdNumber, ipkg.Name, ipkg.Weight, ipkg.Value, ipkg.Price);
         }
         class Package
         {
@@ -15,23 +17,19 @@ namespace PackageDemo
             public string Name { get; set; }
             public double Weight { get; set; }
             private double price;
-            private const double MINIMUM_PRICE = 5;
 
             public double Price
             {
                 get
-                {
-                    return price;
-                }
+                    => price;
                 private set
                 {
-                    if (value <= 32)
-                    {
-                        price = MINIMUM_PRICE;
+                    if (value <= 32) {
+                        price = 5;
                     }
                     else
                     {
-                        price = MINIMUM_PRICE + ((value - 32) * .12);
+                        price = 5 + ((value - 32) * .12);
                     }
                 }
             }
@@ -42,8 +40,6 @@ namespace PackageDemo
                 Weight = weight;
                 Price = weight;
             }
-            public Package() => new Package(0, "", 0);
-
         }
         class InsuredPackage : Package
         {
