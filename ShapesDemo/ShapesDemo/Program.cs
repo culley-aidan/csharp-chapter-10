@@ -23,18 +23,23 @@ namespace ShapesDemo
         }
         class Rectangle : GeometricFigure
         {
-            public Rectangle(double height, double width) : base(height, width)
-            {
-            }
+            public Rectangle(double height, double width) : base(height, width) { }
             public override double ComputeArea()
-            {
-                return Height * Width;
-            }
+                => Height * Width;
         }
         class Square : Rectangle
         {
             public Square(double height, double width) : base(height, height) { }
             public Square(double height) : base(height, height) { }
+        }
+
+        class Triangle : GeometricFigure
+        {
+            public Triangle(double height, double width) : base(height, width) { }
+            public override double ComputeArea()
+            {
+                return Width * (Height / 2);
+            }
         }
     }
 }
