@@ -9,5 +9,12 @@ namespace ShapesDemo
             Console.WriteLine("Hello World!");
         }
 
+        abstract class GeometricFigure
+        {
+            public double Height { get; set; }
+            public double Width { get; set; }
+            public double Area { get; }
+            public abstract double ComputeArea();
+        }
     }
 }
