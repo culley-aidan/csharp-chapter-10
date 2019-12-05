@@ -8,11 +8,14 @@ namespace ShapesDemo
         {
             Console.WriteLine("Rectangles: " + Environment.NewLine);
             DisplayShape(randomRectangles(5));
-            Console.WriteLine("Squares: " + Environment.NewLine);
+            Console.WriteLine(Environment.NewLine + "Squares: " + Environment.NewLine);
+            DisplayShape(randomSquares(5));
+            Console.WriteLine(Environment.NewLine + "Triangles: " + Environment.NewLine);
+            DisplayShape(randomTriangles(5));
         }
         private static Random rng = new Random();
         private static Rectangle[] randomRectangles(int count)
-        {
+        {   
             Rectangle[] recs = new Rectangle[count];
             for (int i = 0; i < count; ++i)
             {
@@ -20,7 +23,24 @@ namespace ShapesDemo
             }
             return recs;
         }
-
+        private static Square[] randomSquares(int count)
+        {
+            Square[] sqrs = new Square[count];
+            for(int i = 0; i < count; ++i)
+            {
+                sqrs[i] = new Square(rng.Next(0, 11));
+            }
+            return sqrs;
+        }
+        private static Triangle[] randomTriangles(int count)
+        {
+            Triangle[] tris = new Triangle[count];
+            for(int i = 0; i < count; ++i)
+            {
+                tris[i] = new Triangle(rng.Next(0, 11), rng.Next(0, 11));
+            }
+            return tris;
+        }
         private static void DisplayShape(GeometricFigure[] figs)
         {
             foreach(GeometricFigure fig in figs)
