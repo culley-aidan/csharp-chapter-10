@@ -9,5 +9,5 @@ C# Programming Chapter 10
 - [X] - 02 - PhotoDemo
 - [ ] - ~~3b - OrderDemo~~
 - [X] - 04 - PackageDemo
-- [ ] - 06 - ShapesDemo
+- [X] - 06 - ShapesDemo
 - [ ] - 09 - SalespersonDemo
