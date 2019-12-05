@@ -31,5 +31,10 @@ namespace ShapesDemo
                 return Height * Width;
             }
         }
+        class Square : Rectangle
+        {
+            public Square(double height, double width) : base(height, height) { }
+            public Square(double height) : base(height, height) { }
+        }
     }
 }
