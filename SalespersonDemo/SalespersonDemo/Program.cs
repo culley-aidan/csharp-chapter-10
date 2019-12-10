@@ -5,12 +5,12 @@ namespace SalespersonDemo
     class Program
     {
         static void Main(string[] args)
-        { 
-            Console.WriteLine("Hello World!");
+        {
+            Console.WriteLine("This assignment is hard to display output for, please check source code.");
         }
         public interface ISellable
         {
-            string MakeSale();
+            string MakeSale(int x);
             string SalesSpeech();
         }
         public abstract class SalesPerson : ISellable
@@ -19,7 +19,7 @@ namespace SalespersonDemo
             public string LastName { get; set; }
             public string FullName { get => GetName(); }
             public abstract string GetName();
-            public abstract string MakeSale();
+            public abstract string MakeSale(int x);
             public abstract string SalesSpeech();
             protected SalesPerson(string first, string last)
             {
@@ -29,23 +29,35 @@ namespace SalespersonDemo
         }
         public class RealEstateSalesperson : SalesPerson
         {
+            private double valuesold = 0;
+            private double commissionearned = 0;
+            public double TotalValueSold { get => valuesold; }
+            public double TotalCommissionEarned { get => commissionearned; }
             public RealEstateSalesperson(string first, string last) : base(first, last) { }
             public override string GetName()
                 => $"{FirstName} {LastName}";
             public override string SalesSpeech()
                 => "It's free real estate.";
-            public override string MakeSale()
-                => "Enter your name, date of birth, social security number";
+            public override string MakeSale(int dollar)
+            {
+                valuesold += dollar;
+                return "Thanks for buying the estate";
+            }
         }
         public class GirlScout : SalesPerson
         {
+            private double cookiesSold = 0;
+            public double TotalCookiesSold { get => cookiesSold; }
             public GirlScout(string first, string last) : base(first, last) { }
             public override string GetName()
                 => $"{FirstName} {LastName}";
             public override string SalesSpeech()
                 => "BUY THE COOKIES.";
-            public override string MakeSale()
-                => "Enter your name and address here";
+            public override string MakeSale(int cookies)
+            {
+                cookiesSold += cookies;
+                return "Thanks for buying the cookies.";
+            }
         }
 
     }
