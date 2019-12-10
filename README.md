@@ -10,4 +10,4 @@ C# Programming Chapter 10
 - [ ] - ~~3b - OrderDemo~~
 - [X] - 04 - PackageDemo
 - [X] - 06 - ShapesDemo
-- [ ] - 09 - SalespersonDemo
+- [X] - 09 - SalespersonDemo
